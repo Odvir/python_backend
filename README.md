@@ -9,7 +9,7 @@ jsonStr = {
 	"long": float, 
 	"ID": {"flrID":int, "bldID":int}, 
 	"dateTime": (ISO 8601 YMDHMSw.d: yyyy-mm-dd hh:mm:ss.s),
-	"ntwrkData": {"dwnldSpd": float, "upldSpd":float}
+	"ntwrkData": {"wifiName": str, "dwnldSpd": float, "upldSpd":float, "outage": bool}
 }
 ```
 
@@ -18,3 +18,6 @@ jsonStr = {
 ### **Sources:**
 
  https://docs.python.org/3/library/json.html
+
+https://docs.python.org/3/library/json.html
+
