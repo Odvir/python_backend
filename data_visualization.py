@@ -8,7 +8,7 @@ print("lmao")
 opt = "postgresql://jasmine:Schema1234##@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=/Users/jasminelin/.postgresql/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313"
 conn = psycopg2.connect(opt)
 wifi_df = pd.read_sql("SELECT * FROM wifi_data", conn)
-print(wifi_df)
+conn = None 
 
 building_coordinates = {}
 
