@@ -11,9 +11,14 @@ class Test_Methods(unittest.TestCase):
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         payload = {"lat": 111.1,
         "long": 112.1,
-        "ID": {"flrID": 1, "bldID": 0},
+        "flrID": 1,
+        "bldID": 0,
         "dateTime": dt_string,
-        "ntwrkData": {"wifiName": "daniel", "dwnldSpd": 10, "upldSpd": 10, "outage": False} }
+        "wifiName": "daniel",
+        "dwnldSpd": 10,
+        "upldSpd": 10,
+        "outage": False
+        }
         encoded_jwt = jwt.encode(payload, "secret", algorithm="HS256")
         f = open("mock.json", "w")
         f.write(encoded_jwt)
