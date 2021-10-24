@@ -12,17 +12,29 @@ jsonStr = {
 	"ntwrkData": {"wifiName": str, "dwnldSpd": float, "upldSpd":float, "outage": bool}
 }
 ```
+**Database Schema**
 
-
+```
+CREATE TABLE schema.wifi_crowdsourcing {
+    latitude FLOAT, 
+    longitude FLOAT, 
+    floor_id INT, 
+    building_id INT, 
+    date_time TIMESTAMP, 
+    wifi_name STRING 
+    download_speed INT, 
+    upload_speed FLOAT, 
+    outage BOOL
+}; 
+```
 
 ### **Installations Required**
 
 ```
 pip install jwt
 pip install psycopg2-binary
+brew install cockroachdb/tap/cockroach
 ```
-
-
 
 ### **Cockroach Stuff:**
 
@@ -45,11 +57,26 @@ database: wifi-crowdsourcing-4313.defaultdb
 password: zPfIA64Mol4tYZCf
 ```
 
+### **Data Visualization :**
 
+```
+Installation Required: 
+Run this on install on the terminal: 
+pip install pandas 
+pip install matplotlib
+pip install sqlalchemy 
+pip install chart_studio
+
+And import the following libraries in python: 
+//import mpld3
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import sqlalchemy import create_engine 
+```
 
 ### **Sources:**
 
- https://docs.python.org/3/library/json.html
+https://docs.python.org/3/library/json.html
 
 https://docs.python.org/3/library/json.html
 
