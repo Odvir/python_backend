@@ -93,7 +93,9 @@ And import the following libraries in python:
 import pandas as pd 
 import plotly.express as px
 import psycopg2
+import chart_studio
 import chart_studio.tools as tls 
+import chart_studio.plotly as py 
 ```
 
 **<u>Windows Instructions</u>**
