@@ -2,10 +2,10 @@ import psycopg2
 import Json_Parser as parser
 
 
-def write_into_db(filename):
+def write_into_db(jwt):
     link = 'postgresql://ofir:zPfIA64Mol4tYZCf@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=/Users/ofirdvir/.postgresql/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313'
     conn = psycopg2.connect(link)
-    payload = parser.decode_jwt(filename)
+    payload = parser.decode_jwt(jwt)
     with conn.cursor() as cur:
         cur.execute("INSERT INTO wifi_data (latitude, longitude, floor_id, building_id, date_time, "
                     "wifi_name, download_speed, upload_speed, outage) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
