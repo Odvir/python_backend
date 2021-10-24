@@ -1,5 +1,3 @@
-/* This should already be done (Ofir end) */ 
-
 CREATE DATABASE IF NOT EXISTS wifi_crowdsourcing; 
 
 /* Sets the wifi_crowdsourcing datbase as the current databse. */

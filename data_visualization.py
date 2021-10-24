@@ -9,8 +9,10 @@ conn = psycopg2.connect(opt)
 wifi_df = pd.read_sql("SELECT * FROM wifi_data", conn)
 conn.close() 
 
+# Create an empty dictionary first
 building_coordinates = {}
 
+# Populate the dictionary with respective values of index, location names, the building latitude, the building longitude and radius
 building_coordinates['index'] = [range(0, 17)]
 
 building_coordinates['location_names'] = ["No Building", "Bancroft Library", "David Blackwell Hall", "California Memorial Stadium", "Cory Hall", "Doe Library", "Dwinelle Hall", 
@@ -23,10 +25,10 @@ building_coordinates['building_latitude'] = [0, 37.872359778544826, 37.867938242
 building_coordinates['building_longitude'] = [0, -122.25906388911869, -122.2611852179538, -122.25076757377833, -122.25738857562385, -122.2595170136872, -122.26063763329417, -122.26035998542721, 
 -122.25766920445895, -122.25338168911863, -122.26532291795363, -122.26037288911863, -122.26085806028352, -122.25874358727283, -122.26222526028351, -122.25911711610816, -122.27174771266547]
 
-building_coordinates['radius'] = [0, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 
-0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020]
+# building_coordinates['radius'] = [0, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 
+# 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020, 0.00000000000020]
 
-#Converts the dictionary to a dataframe
+# Converts the dictionary to a dataframe
 buildings = pd.DataFrame.from_dict(building_coordinates)
 
 # Merge the two dataframes based on the index column 

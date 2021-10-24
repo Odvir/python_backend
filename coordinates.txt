@@ -1,3 +1,5 @@
+The coordinates of different locations on campus: 
+
 "Valley Life Sciences Building" : 37.87158013361558, -122.26222526028351
 "Bancroft Library" : 37.872359778544826, -122.25906388911869
 "David Blackwell Hall" : 37.867938242407455, -122.2611852179538
@@ -17,4 +19,5 @@
 For testing purposes: 
 "The Addison Apartments" : 37.871150946955936, -122.27174771266547
 
+CockroachDB that we are connecting to 
 postgresql://jasmine:Schema1234##@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=$HOME/.postgresql/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313
