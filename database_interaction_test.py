@@ -118,6 +118,7 @@ def test_retry_loop(conn):
 def main():
     opt = parse_cmdline()
     logging.basicConfig(level=logging.DEBUG if opt.verbose else logging.INFO)
+    print(opt.dsn)
 
     conn = psycopg2.connect(opt.dsn)
     create_accounts(conn)
