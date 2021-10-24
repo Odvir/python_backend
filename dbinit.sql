@@ -1,5 +1,3 @@
-/* This should already be done (Ofir end) */ 
-
 CREATE DATABASE IF NOT EXISTS wifi_crowdsourcing; 
 
 /* Sets the wifi_crowdsourcing datbase as the current databse. */
@@ -30,7 +28,7 @@ CREATE TABLE wifi_data (
     building_id INT, 
     date_time TIMESTAMP, 
     wifi_name STRING, 
-    download_speed INT, 
+    download_speed FLOAT, 
     upload_speed FLOAT, 
     outage BOOL
 ); 

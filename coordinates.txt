@@ -1,3 +1,5 @@
+The coordinates of different locations on campus: 
+
 "Valley Life Sciences Building" : 37.87158013361558, -122.26222526028351
 "Bancroft Library" : 37.872359778544826, -122.25906388911869
 "David Blackwell Hall" : 37.867938242407455, -122.2611852179538
@@ -12,6 +14,10 @@
 "Martin Luther King Jr. Center Student Union" : 37.86901620934252, -122.26037288911863
 "Moffitt Library" : 37.87272746906796, -122.26085806028352
 "Soda Hall" : 37.87572091103949, -122.25874358727283
-"Wheeler Hall" : 37.871468295377646, -122.
+"Wheeler Hall" : 37.871468295377646, -122.25911711610816
 
+For testing purposes: 
+"The Addison Apartments" : 37.871150946955936, -122.27174771266547
+
+CockroachDB that we are connecting to 
 postgresql://jasmine:Schema1234##@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=$HOME/.postgresql/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313

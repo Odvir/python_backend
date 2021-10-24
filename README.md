@@ -27,10 +27,11 @@ CREATE TABLE schema.wifi_crowdsourcing {
     building_id INT, 
     date_time TIMESTAMP, 
     wifi_name STRING 
-    download_speed INT, 
+    download_speed FLOAT, 
     upload_speed FLOAT, 
     outage BOOL
 }; 
+(The table was executed in python, and executed through the CockroachDB connection)
 ```
 
 ### **Installations Required**
@@ -84,15 +85,15 @@ password: zPfIA64Mol4tYZCf
 Installation Required: 
 Run this on install on the terminal: 
 pip install pandas 
-pip install matplotlib
-pip install sqlalchemy 
+pip install plotly
 pip install chart_studio
 
 And import the following libraries in python: 
 //import mpld3
 import pandas as pd 
-import matplotlib.pyplot as plt 
-import sqlalchemy import create_engine 
+import plotly.express as px
+import psycopg2
+import chart_studio.tools as tls 
 ```
 
 **<u>Windows Instructions</u>**
