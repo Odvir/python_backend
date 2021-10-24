@@ -3,12 +3,11 @@ import plotly.express as px
 import psycopg2
 import chart_studio.tools as tls 
 
-print("lmao")
 # Connect to database
 opt = "postgresql://jasmine:Schema1234##@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=/Users/jasminelin/.postgresql/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313"
 conn = psycopg2.connect(opt)
 wifi_df = pd.read_sql("SELECT * FROM wifi_data", conn)
-conn = None 
+conn.close() 
 
 building_coordinates = {}
 
