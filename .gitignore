@@ -3,3 +3,4 @@
 /cockroach*
 /.vscode
 /.github
+/.github/*
