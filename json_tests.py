@@ -3,7 +3,7 @@ import json
 import datetime
 import jwt
 from Json_Parser import decode_jwt
-
+import db_inserter as db_access
 
 class Test_Methods(unittest.TestCase):
     def test_something(self):
@@ -23,9 +23,11 @@ class Test_Methods(unittest.TestCase):
         f = open("mock.json", "w")
         f.write(encoded_jwt)
         f.close()
-        decoded_jwt = decode_jwt()
+        decoded_jwt = decode_jwt("mock.json")
 
         assert (decoded_jwt == payload) is True
+    def test_db(self):
+        db_access.write_into_db("mock.json")
 
 if __name__ == '__main__':
     unittest.main()
