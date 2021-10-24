@@ -6,7 +6,7 @@ conn = psycopg2.connect(opt)
 
 with conn.cursor() as cur:
     cur.execute(
-        "CREATE TABLE wifi_data (latitude FLOAT, longitude FLOAT, floor_id INT, building_id INT, date_time TIMESTAMP, wifi_name STRING, download_speed INT, upload_speed FLOAT, outage BOOL);"
+        "CREATE TABLE wifi_data (latitude FLOAT, longitude FLOAT, floor_id INT, building_id INT, date_time TIMESTAMP, wifi_name STRING, download_speed FLOAT, upload_speed FLOAT, outage BOOL);"
     )
     cur.execute("SELECT date_time AT TIME ZONE 'UTC' AT TIME ZONE 'Pacific Standard Time' AS LocalTime FROM wifi_data;")
 

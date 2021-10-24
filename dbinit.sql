@@ -30,7 +30,7 @@ CREATE TABLE wifi_data (
     building_id INT, 
     date_time TIMESTAMP, 
     wifi_name STRING, 
-    download_speed INT, 
+    download_speed FLOAT, 
     upload_speed FLOAT, 
     outage BOOL
 ); 
