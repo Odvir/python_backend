@@ -136,7 +136,9 @@ __azurite_db*__.json
 =======
 /__pycache__
 /.idea
-/cockroach*
+cockroach
+cockroach/*
+.DS_Store
 /.vscode
 /.github
 /.github/*
