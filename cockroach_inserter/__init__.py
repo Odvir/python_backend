@@ -11,4 +11,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         insterter.write_into_db(data)
         return func.HttpResponse("Payload inserted into cockroach sucessfully!", status_code = 200)
     except BaseException as e:
-        return func.HttpResponse(e, status_code = 400)
+        return func.HttpResponse(str(e), status_code = 400)
