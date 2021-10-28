@@ -5,7 +5,8 @@ import logging
 
 
 def write_into_db(payload: dict):
-    link = "postgresql://ofir:zPfIA64Mol4tYZCf@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert=" + str(pathlib.Path(__file__).parent) + "/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313"
+    link = f"postgresql://ofir:zPfIA64Mol4tYZCf@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/wifi_crowdsourcing?sslmode=verify-full&sslrootcert={pathlib.Path(__file__).parent}/root.crt&options=--cluster%3Dwifi-crowdsourcing-4313"
+    # Could also pass in context.function_directory as an input from __init__.py
     conn = psycopg2.connect(link)
     with conn.cursor() as cur:
         try:
