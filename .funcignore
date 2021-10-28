@@ -5,3 +5,4 @@
 !cockroach_inserter/*
 !requirements.txt
 !host.json
+.venv
