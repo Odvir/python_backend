@@ -1,5 +1,7 @@
-.git*
-.vscode
-local.settings.json
-test
-.venv
+# Ignore everything
+*
+# ... except the cockroach_inserter dir and everything in it
+!cockroach_inserter
+!cockroach_inserter/*
+!requirements.txt
+!host.json

@@ -37,7 +37,6 @@ CREATE TABLE schema.wifi_crowdsourcing {
 ### **Installations Required**
 
 ```
-pip install jwt
 pip install psycopg2-binary
 brew install cockroachdb/tap/cockroach
 ```
